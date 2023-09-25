@@ -12,35 +12,24 @@ page_name = "Jay Shetty Sign Up"
 page_title = "Jay Shetty Coaching Enrollment"
 page_favicon = "jsicon.png"
 
-max_width = 950
+max_width = 800
 
-st.set_page_config(page_title=page_name, page_icon = page_favicon)#, layout='wide')
+#st.set_page_config(page_title=page_name, page_icon = page_favicon)#, layout='wide')
 st.markdown(
         f"""
 <style>
     .appview-container .main .block-container{{
         max-width: {max_width}px;
-        padding-top: 0rem;
-        padding-right: 0rem;
-        padding-left: 0rem;
-        padding-bottom: rem;
+        padding-top: 5rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+        padding-bottom: 5rem;
     }}
 </style>
 """,
         unsafe_allow_html=True,
     )
 
-
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-top: 0rem;
-                    padding-bottom: 0rem;
-                    padding-left: 0rem;
-                    padding-right: 0rem;
-                }
-        </style>
-        """, unsafe_allow_html=True)
 st.markdown(hide_st_style, unsafe_allow_html=True)
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
@@ -100,25 +89,25 @@ vals = {
     qs[0]: 1, qs[1]: 1, qs[2]: 1, qs[4]: 1, qs[5]: 1, qs[6]: 1, qs[7]: 1
 }
 # st.markdown("---")
-main_columns = st.columns([7,4])
-with main_columns[0]:
-    st.markdown("""# CONGRATULATIONS!
+# main_columns = st.columns([7,4])
+# with main_columns[0]:
+#     st.markdown("""# CONGRATULATIONS!
 
-### You're about to book a call with a friendly enrollment advisor inside Jay Shetty Coaching Certification School! """)
-with main_columns[1]:
-    st.image("js_profile.png")
-    st.markdown(hide_img_fs, unsafe_allow_html=True)
-st.write(
-    """<style>
-    [data-testid="stHorizontalBlock"] {
-        align-items: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown("<div align=\"center\">This call will be your gateway to find out more about this program and answer any questions you have! We're excited for you to take this step and look forward to speaking with you.</div><br>", unsafe_allow_html=True)
-st.markdown("##### Provide your information below:")
+# ### You're about to book a call with a friendly enrollment advisor inside Jay Shetty Coaching Certification School! """)
+# with main_columns[1]:
+#     st.image("js_profile.png")
+#     st.markdown(hide_img_fs, unsafe_allow_html=True)
+# st.write(
+#     """<style>
+#     [data-testid="stHorizontalBlock"] {
+#         align-items: center;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+# st.markdown("<div align=\"center\">This call will be your gateway to find out more about this program and answer any questions you have! We're excited for you to take this step and look forward to speaking with you.</div><br>", unsafe_allow_html=True)
+# st.markdown("##### Provide your information below:")
 with st.form("Answers"):
     cols = st.columns([4,2,4])
     with cols[0]:
@@ -172,35 +161,35 @@ with st.form("Answers"):
 # conn = st.experimental_connection("gsheets", type=GSheetsConnection)
 # data = conn.read(worksheet="Sheet1")
 # st.dataframe(data)
-maglr = '''
-<div style="text-align: center;"><iframe src="https://embed.maglr.com/oseawedjvb?nav=3501" width="950" height="550" seamless="seamless" scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen=""></iframe></div>
-'''
+# maglr = '''
+# <div style="text-align: center;"><iframe src="https://embed.maglr.com/oseawedjvb?nav=3501" width="950" height="550" seamless="seamless" scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen=""></iframe></div>
+# '''
 
-maglr = '''
-<br>
-<body>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: 0;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-        }
-        iframe {
-            width: 950px;
-            max-width: 100%;
-            height: 550px;
-            position: absolute;
-            border 0 none;
-            padding: 0;
-        }
-    </style>
-    <iframe src="https://embed.maglr.com/oseawedjvb?nav=3501"></iframe>
-</body>
-'''
+# maglr = '''
+# <br>
+# <body>
+#     <style>
+#         body {
+#             margin: 0;
+#             padding: 0;
+#             overflow: 0;
+#             display: flex;
+#             flex-flow: row nowrap;
+#             justify-content: center;
+#             align-items: center;
+#         }
+#         iframe {
+#             width: 950px;
+#             max-width: 100%;
+#             height: 550px;
+#             position: absolute;
+#             border 0 none;
+#             padding: 0;
+#         }
+#     </style>
+#     <iframe src="https://embed.maglr.com/oseawedjvb?nav=3501"></iframe>
+# </body>
+# '''
 
 
-st.markdown(maglr, unsafe_allow_html=True)
+# st.markdown(maglr, unsafe_allow_html=True)
