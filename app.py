@@ -11,7 +11,7 @@ st.markdown(f"""
         padding-left: 0rem;
         padding-bottom: 0rem;
     }}
-</style>
+</style>"""+"""
 <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
