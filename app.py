@@ -95,4 +95,5 @@ with st.form("Answers"):
             if not check:
                 error = error + "\n\nI understand my Enrollment Advisor will call me*"
             st.error(error, icon="🚨")
-print(st.experimental_get_query_params(), get_remote_ip())
+st.success(st.experimental_get_query_params())
+st.success(get_remote_ip())
