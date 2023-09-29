@@ -1,6 +1,4 @@
 scikit-learn==0.24.2
+streamlit==1.18.1
 nltk
 numpy
-streamlit
-gspread
-oauth2client
