@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 max_width = 800
 st.markdown(f"""
 <style>
@@ -37,16 +36,6 @@ url2 = "https://pages.jayshettycoaching.com/test-jscs-unqualified-lead/"
 import datetime
 from featurizer import *
 import streamlit.components.v1 as components
-from streamlit.runtime.scriptrunner import get_script_run_ctx
-
-def get_remote_ip() -> str:
-    try:
-        ctx = get_script_run_ctx()
-        if ctx is None: return None
-        session_info = st.runtime.get_instance().get_client(ctx.session_id)
-        if session_info is None: return None
-    except: return None
-    return session_info.request.remote_ip
 
 country_list = [f"{i[0]}: {i[1]}" for i in CODES.items()]
 
@@ -96,4 +85,3 @@ with st.form("Answers"):
                 error = error + "\n\nI understand my Enrollment Advisor will call me*"
             st.error(error, icon="🚨")
 st.success(st.experimental_get_query_params())
-st.success(get_remote_ip())
